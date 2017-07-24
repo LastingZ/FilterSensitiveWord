@@ -47,13 +47,13 @@ public class FilterSensitiveWord {
 		String word;
 		while(it.hasNext()){
 			word=it.next();
-			insertIntoDict(word, wordmap);
+			insertIntoDict(word);
 		}
 		return wordmap;
 	}
 	
 	//将敏感词加入到字典树
-	public void insertIntoDict(String word,Map<String,Object> wordmap){
+	public static void insertIntoDict(String word){
 		String tmp;
 		Map<String,Object> nowmap=wordmap;
 		for(int i=0;i<word.length();i++){
